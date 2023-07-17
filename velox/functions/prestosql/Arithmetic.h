@@ -49,6 +49,17 @@ struct PlusFunction {
   }
 };
 
+// Added for Test purposes.
+// DO NOT CHECKIN
+template <typename T>
+struct FooFunction {
+  template <typename TInput>
+  FOLLY_ALWAYS_INLINE void
+  call(TInput& result, const TInput& a, const TInput& b) {
+    result = plus(a, b);
+  }
+};
+
 template <typename T>
 struct MinusFunction {
   template <typename TInput>

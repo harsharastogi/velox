@@ -25,6 +25,7 @@ namespace facebook::velox::functions {
 namespace {
 void registerSimpleFunctions(const std::string& prefix) {
   registerBinaryFloatingPoint<PlusFunction>({prefix + "plus"});
+  registerBinaryFloatingPoint<FooFunction>({prefix + "foo"});
   registerBinaryFloatingPoint<MinusFunction>({prefix + "minus"});
   registerBinaryFloatingPoint<MultiplyFunction>({prefix + "multiply"});
   registerBinaryFloatingPoint<DivideFunction>({prefix + "divide"});
